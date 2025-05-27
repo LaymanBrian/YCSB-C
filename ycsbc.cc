@@ -83,7 +83,7 @@ struct MemDB : ycsbc::DB {
   }
   ~MemDB() override {
     // dump to mem dev
-    ofstream fs("/mnt/memdb/db", ios::out | ios::trunc | ios::);
+    ofstream fs("/mnt/memdb/db", ios::out | ios::trunc);
     if (!fs.is_open()) {
       cerr << "Failed to open memdb file for writing." << endl;
       return;
